@@ -1,10 +1,11 @@
 import * as RBXWorkspace from './core/classes.js'
 
-const game = new RBXWorkspace.game({
+const ins = new RBXWorkspace.game({
     ins: {
         Name: "game",
         Parent: "_G"
     }
 })
 
-// . . . SOON
+const game = ins._G()
+console.log(game.GetService("Workspace"))

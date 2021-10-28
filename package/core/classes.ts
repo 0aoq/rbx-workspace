@@ -9,6 +9,7 @@ const DeleteInstance = function(x) {
 
 export class Instance {
     public Destroy = DeleteInstance(this)
+    public GetProps = function() { return this.props }
     public FindFirstChild = function() {
         for (let x of CollectionService._G) {
             if (x.path.includes(this.props.ins.Name)) {
@@ -51,7 +52,13 @@ export class game {
         return this.services.find(name)
     }
 
-    public _G = function() { return CollectionService._G }
+    public Objects = function() { return CollectionService._G }
+    public GetObject = function(name: string) {
+        return CollectionService.QueryObject(name)
+    }
+    public Instance = function(props) {
+        return CollectionService.RegisterObject(props)
+    }
 }
 
 // export
