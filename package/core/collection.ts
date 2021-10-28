@@ -1,19 +1,19 @@
-export let objs = []
+export let _G = []
 
 // CollectionService functions
 const QueryObject = function(name: string) {
-    for (let x of objs) {
-        if (objs.ins.FullName === name) {
+    for (let x of _G) {
+        if (_G.ins.FullName === name) {
             return x
         }
     }
 }
 
 const RegisterObject = function(prop) {
-    // create object full name, and push to objs list
-    objs.ins.FullName = `${objs.ins.Parent}.${objs.ins.Name}`
-    objs.ins.Path = objs.ins.FullName.split(".")
-    objs.push(prop)
+    // create object full name, and push to _G list
+    _G.ins.FullName = `${_G.ins.Parent}.${_G.ins.Name}`
+    _G.ins.Path = _G.ins.FullName.split(".")
+    _G.push(prop)
 }
 
 const DestroyObject = function(name: string) { 
@@ -26,5 +26,5 @@ export default {
     QueryObject,
     RegisterObject,
     DestroyObject,
-    objs
+    _G
 }
