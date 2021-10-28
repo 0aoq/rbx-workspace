@@ -12,6 +12,10 @@ export interface Vector3 {
     x: number, y: number, z: number,
 }
 
+export interface Udim2 {
+    ScaleX: number, OffsetX: number, ScaleY: number, OffsetY: number
+}
+
 export interface Part {
     ins: Instance,
     Color: string, // hex
