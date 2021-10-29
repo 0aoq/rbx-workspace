@@ -66,7 +66,6 @@ export class RemoteEvent extends Instance {
     }
 }
 
-
 export class game {
     // project workspace
     constructor(props: types.Default) {
