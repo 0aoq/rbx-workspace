@@ -1,4 +1,5 @@
 import * as RBXWorkspace from './core/classes.js'
+import { print, warn, error } from './core/luau.js'
 
 const ins = new RBXWorkspace.game({
     ins: {
@@ -7,5 +8,5 @@ const ins = new RBXWorkspace.game({
     }
 })
 
-const game = ins._G()
-console.log(game.GetService("Workspace"))
+const GameObjects = ins.Objects()
+print(JSON.stringify(GameObjects))

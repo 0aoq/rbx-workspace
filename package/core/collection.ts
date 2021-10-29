@@ -9,11 +9,11 @@ const QueryObject = function (name: string) {
     }
 }
 
-const RegisterObject = function (prop) {
+const RegisterObject = function (props) {
     // create object full name, and push to _G list
     _G.ins.FullName = `${_G.ins.Parent}.${_G.ins.Name}`
     _G.ins.Path = _G.ins.FullName.split(".")
-    _G.push(prop)
+    _G.push(props)
 }
 
 const DestroyObject = function (name: string) {

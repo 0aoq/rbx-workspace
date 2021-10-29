@@ -15,7 +15,7 @@ export class Vector3 {
 }
 
 export class Udim2 {
-    constructor(props: types.Vector3) {
+    constructor(props: types.Udim2) {
         this.props = props
         return props
     }
@@ -23,6 +23,7 @@ export class Udim2 {
 
 // default class functions
 export class Instance {
+    constructor() { CollectionService.RegisterObject(this.props) }
     public Destroy = DeleteInstance(this)
     public GetProps = function () { return this.props }
     public FindFirstChild = function () {
@@ -60,11 +61,15 @@ export class RemoteEvent extends Instance {
 
 
 export class game {
+    // project workspace
     constructor(props: types.Default) {
         this.props = props
-        this.services = [
-            "Workspace"
-        ]
+        this.services = []
+
+        this.services.workspace = new Workspace({
+            Name: "Workspace",
+            Parent: "game"
+        })
     }
 
     public GetService = function (name: string) {
