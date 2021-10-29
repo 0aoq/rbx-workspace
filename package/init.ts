@@ -6,7 +6,7 @@ import {
     CFrame, 
     Udim2, 
     Vector3 
-} from './core/classes.js'
+} from './core/workspace.js'
 import { print, warn, error } from './core/luau.js'
 
 const ins = new game({

@@ -36,3 +36,18 @@ export class Instance {
     }
 }
 ```
+
+Parts can be created easily, and have all the default functions as the **Instance** class!
+```ts
+// init.ts; 2021-10-29;
+const test_part = new Part({
+    ins: {
+        Name: "Baseplate",
+        Parent: "Workspace"
+    },
+    Size: new Vector3({x: 100, y: 5, z: 100}),
+    Position: new Vector3({x: 0, y: 0, z: 0}),
+    Color: new Color3({r: 15, g: 15, b: 15})
+})
+
+```
