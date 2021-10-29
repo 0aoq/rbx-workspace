@@ -51,3 +51,30 @@ const test_part = new Part({
 })
 
 ```
+
+### Classes
+
+Most classes extend from the **Instance** class, and have similar properties. The list of default properties for **Instance** is below;
+
+----------------
+
+#### Instance
+- **functions:**
+    - Delete
+    - GetProps
+    - FindFirstChild
+- **properties:**
+```ts
+export interface Instance {
+    // types.ts; 2021-10-29;
+    Name: string,
+    Parent: Instance,
+    FullName?: string,
+    Path?: Array[string],
+    Active?: boolean
+}
+```
+
+----------------
+
+The **Instance** properties do not apply to *every* class. Classes such as **Vector3** and **Udim2**, and do not support the **Instance** related functions.

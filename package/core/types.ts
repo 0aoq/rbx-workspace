@@ -5,7 +5,7 @@ export interface Instance {
     Parent: Instance,
     FullName?: string,
     Path?: Array[string],
-    Active?: boolean = true
+    Active?: boolean
 }
 
 export interface Vector3 {

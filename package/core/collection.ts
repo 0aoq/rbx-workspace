@@ -11,8 +11,9 @@ const QueryObject = function (name: string) {
 
 const RegisterObject = function (props) {
     // create object full name, and push to _G list
-    _G.ins.FullName = `${_G.ins.Parent}.${_G.ins.Name}`
-    _G.ins.Path = _G.ins.FullName.split(".")
+    props.FullName = `${props.Parent}.${props.Name}`
+    props.Path = props.FullName.split(".")
+    props.Active = true
     _G.push(props)
 }
 
