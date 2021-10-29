@@ -16,6 +16,10 @@ export interface Udim2 {
     ScaleX: number, OffsetX: number, ScaleY: number, OffsetY: number
 }
 
+export interface CFrame {
+    Vector3Position: Vector3, Vector3Rotation: Vector3
+}
+
 export interface Color3 {
     r: number, g: number, b: number
 }
@@ -33,5 +37,7 @@ export default {
     Instance,
     Vector3,
     Part,
-    Default
+    Default,
+    Udim2,
+    CFrame
 }

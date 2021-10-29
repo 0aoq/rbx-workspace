@@ -9,4 +9,4 @@ const ins = new RBXWorkspace.game({
 })
 
 const GameObjects = ins.Objects()
-print(JSON.stringify(GameObjects))
+print(GameObjects)

@@ -21,6 +21,13 @@ export class Udim2 {
     }
 }
 
+export class CFrame {
+    constructor(props: types.CFrame) {
+        this.props = props
+        return prop
+    }
+}
+
 // default class functions
 export class Instance {
     constructor() { CollectionService.RegisterObject(this.props) }
@@ -88,5 +95,5 @@ export class game {
 
 // export
 export default {
-    Part, game, RemoteEvent
+    Part, game, RemoteEvent, CFrame, Udim2, Vector3
 }
