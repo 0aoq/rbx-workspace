@@ -8,6 +8,7 @@ const DeleteInstance = function (x) {
 
 // classes for properties
 export class Vector3 {
+    props: {}
     constructor(props: types.Vector3) {
         this.props = props
         return props
@@ -15,6 +16,7 @@ export class Vector3 {
 }
 
 export class Udim2 {
+    props: {}
     constructor(props: types.Udim2) {
         this.props = props
         return props
@@ -22,6 +24,7 @@ export class Udim2 {
 }
 
 export class CFrame {
+    props: {}
     constructor(props: types.CFrame) {
         this.props = props
         return prop
@@ -48,16 +51,19 @@ export class GuiObject {
 
 // specific classes
 export class Part extends Instance {
-    constructor(props: types.Part) { this.props = props }
+    props: {}
+    constructor(props: types.Part) { super(); this.props = props }
 }
 
 class Workspace extends Instance {
     // private class, cannot be created with new from outside classes.ts
-    constructor(props: types.Default) { this.props = prop }
+    props: {}
+    constructor(props: types.Default) { super(); this.props = prop }
 }
 
 export class RemoteEvent extends Instance {
-    constructor(props: types.Default) { this.props = prop }
+    props: {}
+    constructor(props: types.Default) { super(); this.props = prop }
     public FireServer = function (Player, props) {
         // set up RemoteEvent API for FireServer
     }
@@ -68,7 +74,9 @@ export class RemoteEvent extends Instance {
 
 export class game {
     // project workspace
+    props: {}
     constructor(props: types.Default) {
+        super()
         this.props = props
         this.services = []
 

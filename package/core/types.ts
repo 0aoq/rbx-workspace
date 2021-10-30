@@ -4,7 +4,7 @@ export interface Instance {
     Name: string,
     Parent: Instance,
     FullName?: string,
-    Path?: Array[string],
+    Path?: Array<string>,
     Active?: boolean
 }
 
